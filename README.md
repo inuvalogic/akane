@@ -1,10 +1,10 @@
-Akane web engine
+Akane Web Engine v2
 ===================
-current version 0.1
+current version 2.0.1
 
 develop by Wisnu
 
 change log
 
-v 0.1
+v 2.0.1
 - base system
