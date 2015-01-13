@@ -2,13 +2,13 @@
 
 namespace Apps\Controller;
 
-use Apps\Core\Input as Input;
+use Apps\Core\Response;
+use Apps\Core\Template;
 
 class HomeController {
 
     public function indexAction(){
-        echo '<h2>Welcome to the jungle!!</h2>';
-        $input = new Input;
-        $input->test();
+        $content = Response::loadView('home', false, true);
+        Template::load('base',$content);
     }
 }

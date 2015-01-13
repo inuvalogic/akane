@@ -18,8 +18,6 @@ class Autoloader
         
         $filename = __ROOT_DIR__.$classname.".php";
         
-        // echo 'class = ', $classname, '<br />file = ', $filename, '<br />loader = ', __METHOD__, "()<br /><br />";
-
         $this->filename = $filename;
 
         if((file_exists($filename) === false) || (is_readable($filename) === false)) {
@@ -27,6 +25,8 @@ class Autoloader
         }
         
         require($filename);
+        
+        // echo 'class = ', $classname, '<br />file = ', $filename, '<br />loader = ', __METHOD__, "()<br /><br />";
 
     }
 }
