@@ -4,6 +4,7 @@ namespace Apps\Controller;
 
 use Apps\Core\Response;
 use Apps\Core\Template;
+use Apps\Model\Portfolio;
 
 class PageController {
     
@@ -18,7 +19,7 @@ class PageController {
 
     public function portfolioAction(){
         
-        $data['portfolio'] = '';
+        $data['portfolio'] = Portfolio::getAll();
 
         $content = Response::loadView('portfolio', $data, true);
 

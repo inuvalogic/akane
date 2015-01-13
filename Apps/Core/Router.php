@@ -3,6 +3,8 @@
 namespace Apps\Core;
 
 class Router {
+    
+    public static $current;
 
     public static function init(){
         include __CONFIG_DIR__.'routes.php';
@@ -15,7 +17,9 @@ class Router {
                 foreach ($routes as $from => $to)
                 {
                     if (preg_match('#^'.$from.'$#', $uri))
-                    {                        
+                    {
+                        Router::$current = $from;
+                        
                         $parse = explode(':', $to);
                         
                         if ( count($parse) > 0)
