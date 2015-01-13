@@ -1,8 +1,6 @@
 Akane Web Engine v2
 ===================
-current version 2.0.1
-
-develop by Wisnu
+develop by Wisnu (wisnu-hafid.net)
 
 change log
 
